@@ -1,1 +1,0 @@
-git@github.com:jmintel7/django_trials.git
