@@ -2,6 +2,6 @@
 .git
 venv
 link.txt
+snippets
 
-django_trials/django_trials/__pycache__
-django_trials/blog/__pycache__
+*pyc
