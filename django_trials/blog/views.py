@@ -19,12 +19,13 @@ def home(request):
     return render(request, 'blog/home.html', context)
 
 
-class PostListView(ListView):
+class PostListView(LoginRequiredMixin,ListView):
     model = Post
     template_name = 'blog/home.html' # <app>/<model>_<viewtype>.html
     context_object_name = 'posts'
     ordering = ['-date_posted']
     paginate_by = 2
+    extra_context = {'title':'Home'}
 
 class UserPostListView(ListView):
     model = Post
